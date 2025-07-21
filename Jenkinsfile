@@ -11,7 +11,7 @@ pipeline {
                 sh 'docker build -t myapp:latest .'
             }
         }
-        stage('Run Container') {
+        stage('Run Containers') {
             steps {
                 sh 'docker run -d -p 80:3000 myapp:latest'
             }
